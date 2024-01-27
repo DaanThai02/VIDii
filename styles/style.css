@@ -28,12 +28,12 @@ body {
   height: 100vh;
   border: none;
   margin: 0;
-  overflow: hidden;
   display: flex;
   flex-flow: column;
 }
 main {
   flex: 1;
+  overflow: hidden;
 }
 
 /* Button geen styling  https://stackoverflow.com/questions/2460100/remove-the-complete-styling-of-an-html-button-submit*/
@@ -48,10 +48,10 @@ button {
 
 /* Header */
 header img {
-  width: 14em;
+  width: 10em;
 }
 header{
-  margin: 1em;
+  margin: 2em;
    display: flex;
    justify-content: center;
 }
@@ -85,20 +85,28 @@ header{
 
 .Information p {
   font-family: poppins, Arial, Helvetica, sans-serif;
-  font-size: 0.8em;
-  margin: 0;
+  font-size: 1em;
+  margin: 0 2em 0 0;
+}
+
+.TextBox{
+  width: auto;
+  height: 150px;
+  overflow: auto;
+  margin-bottom: 10px;
   margin-right: 2em;
 }
 
+
 p {
   color:var(--color-white);
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 ul {
   display: grid;
   grid-template-columns: 1fr 50% 1fr;
-  grid-template-rows: 220px 220px 1fr;
+  grid-template-rows: 200px 200px 1fr;
   gap: 2em;
   height: 100%;
   margin: 0;
@@ -107,7 +115,7 @@ ul {
 
 /* Grootte van de circles(Sharingan) */
 li img {
-width: 10em;
+width: 8em;
 }
 
 ul li{
@@ -136,16 +144,17 @@ ul li:nth-of-type(2) img:nth-of-type(3) {
 /* Sharingan Sasuke Uchiha links */
 ul li:nth-of-type(2) img:nth-of-type(1){
   position: relative;
-  top: 397px;
-  left: -96px;
-  width: 40px;
+  top: 281px;
+  left: -68px;
+  width: 28px;
+  
 }
 /* Sharingan Sasuke Uchiha rechts */
 ul li:nth-of-type(2) img:nth-of-type(2){
   position: relative;
-  top: 356px;
-  left: 96px;
-  width: 40px;
+  top: 253px;
+  left: 68px;
+  width: 28px;
 }
 
 ul li:nth-of-type(3) {
@@ -414,8 +423,8 @@ button:nth-of-type(1):hover img:nth-of-type(4) {
 li:nth-of-type(2) {
 }
 
-@media only screen and (max-width: 900px) {
-  .Information p {
-    font-size: 5em;
+@media only screen and (max-width: 1900px) {
+  .Information h2 {
+    font-size: 1.2em;
   }
 }

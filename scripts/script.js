@@ -34,6 +34,7 @@ OneTomoeSharingan.addEventListener("click", function(){
         }, 1500);
 // Achtergrond verandert
     document.body.style.backgroundImage = "url('images/naruto_background_1.png')";
+    
 }); 
 
 
