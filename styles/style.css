@@ -1,50 +1,416 @@
-/**************/
-/* CSS REMEDY */
-/**************/
-
-/* naar een idee van Jen Simmons */
 *, *::after, *::before {
-  box-sizing:border-box;  
-}
-
-body {
-  margin:0;
-}
-
-button:not([disabled]) {
-  cursor:pointer;
-}
-
-img {
-  max-width:100%;
+  box-sizing: border-box;  
 }
 
 
-
-
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
-
+/* Custom Properties */
 :root {
-  --color-headings:crimson
-  /* ... */
+  --color-white:white;
+  --color-black: black;
+  --color-purple: rgb(15, 0, 15);
+  --color-blue: rgb(0, 119, 230);
+}
 
+@font-face {
+  font-family: Naruto;
+  src: url(../fonts/njnaruto.ttf) format('opentype');
 }
 
 
 
 
 
-/********************/
-/* ALGEMENE STYLING */
-/********************/
-
+/* Algemene styling */
 h1 {
-  color:var(--color-headings);
+  color:var(--color-white);
+}
+body {
+  background: url("/images/naruto_background_3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: brightness(80%);
+  height: 100vh;
+  border: none;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+}
+main {
+  flex: 1;
 }
 
-/* ... */
+/* Button geen styling  https://stackoverflow.com/questions/2460100/remove-the-complete-styling-of-an-html-button-submit*/
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  font: inherit;
+  outline: inherit;
+  cursor: pointer;
+}
+
+/* Header */
+header img {
+  width: 14em;
+}
+header{
+  margin: 1em;
+   display: flex;
+   justify-content: center;
+}
 
 
+/* Main */
+/* Information Sasuke Uchiha */
+.Information {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-template-rows: 100px 1fr;
+  grid-column-gap: 30px;
+}
+
+.Information h1 {
+  display: flex;
+  font-family: Naruto, Arial, Helvetica, sans-serif;
+  -webkit-text-stroke: 1px var(--color-black);
+  align-items: center;
+  justify-content: center;
+}
+
+.Information h2{
+  display: flex;
+  color:var(--color-white);
+  font-family: poppins, Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  align-items: center;
+}
+
+.Information p {
+  font-family: poppins, Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  margin: 0;
+  margin-right: 2em;
+}
+
+p {
+  color:var(--color-white);
+  font-size: 1.5em;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: 1fr 50% 1fr;
+  grid-template-rows: 290px 290px 1fr;
+  gap: 2em;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Grootte van de circles(Sharingan) */
+li img {
+width: 14em;
+}
+
+ul li{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+ul li:nth-of-type(1) {
+  font-family: Naruto, Arial, Helvetica, sans-serif;
+  -webkit-text-stroke: 2px var(--color-black);
+  align-items: center;
+}
+
+/* Sasuke Uchiha */
+ul li:nth-of-type(2) {
+  grid-row: 1 / 3;
+  grid-column: 2 / 3;
+  align-items: center;
+}
+
+ul li:nth-of-type(2) img:nth-of-type(3) {
+  position: absolute;
+  width: 48em;
+}
+/* Sharingan Sasuke Uchiha links */
+ul li:nth-of-type(2) img:nth-of-type(1){
+  position: relative;
+  top: 397px;
+  left: -96px;
+  width: 40px;
+}
+/* Sharingan Sasuke Uchiha rechts */
+ul li:nth-of-type(2) img:nth-of-type(2){
+  position: relative;
+  top: 356px;
+  left: 96px;
+  width: 40px;
+}
+
+ul li:nth-of-type(3) {
+  font-family: Naruto, Arial, Helvetica, sans-serif;
+  -webkit-text-stroke: 2px var(--color-black);
+  align-items: center;
+}
+
+ul li:nth-of-type(4) {
+  font-family: Naruto, Arial, Helvetica, sans-serif;
+  -webkit-text-stroke: 2px var(--color-black);
+  align-items: center;
+}
+
+ul li:nth-of-type(5) {
+  font-family: Naruto, Arial, Helvetica, sans-serif;
+  -webkit-text-stroke: 2px var(--color-black);
+  align-items: center;
+}
+
+ul li:nth-of-type(6) {
+  font-family: Naruto, Arial, Helvetica, sans-serif;
+  -webkit-text-stroke: 2px var(--color-black);
+  align-items: center;
+}
+
+/* Informatie */
+ul li:nth-of-type(7) {
+  font-family: Naruto, Arial, Helvetica, sans-serif;
+  border-radius: 20px;
+  background-color: var(--color-purple);
+  z-index: 500;
+  border: 8px solid var(--color-white);
+  outline: 8px solid var(--color-black);
+}
+
+ul li:nth-of-type(8) {
+  font-family: Naruto, Arial, Helvetica, sans-serif;
+  -webkit-text-stroke: 2px var(--color-black);
+  align-items: center;
+}
+
+button:nth-of-type(1) img:nth-of-type(1),button:nth-of-type(1) img:nth-of-type(2), button:nth-of-type(1) img:nth-of-type(3) {
+  position: absolute;
+}
+
+button:nth-of-type(1):hover img {
+  animation-name:Sharingan-rotate;
+  animation-duration:2s;
+  animation-iteration-count:1;
+  animation-timing-function:cubic-bezier(.69,.19,.18,.87);
+}
+
+button:nth-of-type(1):hover img:nth-of-type(1) {
+  opacity:1;
+  animation-delay:0s;
+}
+
+button:nth-of-type(1):hover img:nth-of-type(2) {
+  opacity: 0.5;
+  animation-delay:0.05s;
+}
+
+button:nth-of-type(1):hover img:nth-of-type(3) {
+  opacity: 0.25;
+  animation-delay:0.1s;
+}
+
+button:nth-of-type(1):hover img:nth-of-type(4) {
+  opacity: 0.175;
+  animation-delay:0.15s;
+}
+
+@keyframes Sharingan-rotate {
+  0% {
+    transform:rotate(0deg);
+  }
+  85%{
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform:rotate(360deg);
+  }
+}
+
+/* Sasuke Sharingan draaien */
+.RotateSharingan {
+  animation-name:SharinganRotateSasuke;
+  animation-duration:1.5s;
+  animation-iteration-count:1;
+  animation-timing-function:cubic-bezier(.69,.19,.18,.87);
+}
+
+@keyframes SharinganRotateSasuke {
+  0% {
+    transform:rotate(0deg);
+  }
+  85%{
+    transform: rotate(3turn);
+  }
+
+  100% {
+    transform: rotate(3turn);
+  }
+}
+
+/* Vuur effect */
+.fire {
+  opacity: 0;
+  position: relative;
+  width: 200px;
+  top: 350px;
+  z-index: 1000;
+}
+
+.fire_change {
+  animation-name:FireMouth;
+  animation-duration: 4s;
+  animation-iteration-count:1;
+  animation-timing-function:cubic-bezier(.69,.19,.18,.87);
+  animation-delay: 1s;
+}
+
+@keyframes FireMouth {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+  }
+  50%{
+    transform: scale(1);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(120);
+  }
+}
+
+/* Blood effect */
+.blood {
+  opacity: 0;
+  position: relative;
+  width: 100px;
+  top: 150px;
+  left: 100px;
+  z-index: 1000;
+}
+
+.blood_change {
+  animation-name:Bloodeye;
+  animation-duration: 3s;
+  animation-iteration-count:1;
+  animation-timing-function:cubic-bezier(.69,.19,.18,.87);
+  animation-delay: 1s;
+}
+
+@keyframes Bloodeye {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Kunai */
+
+.kunai {
+  opacity: 0;
+  position: relative;
+  width: 100px;
+  top: 50px;
+  z-index: 2000;
+}
+
+.kunai_change {
+  animation-name:Kunai;
+  animation-duration: 4s;
+  animation-iteration-count:1;
+  animation-timing-function:cubic-bezier(.69,.19,.18,.87);
+  animation-delay: 1s;
+}
+
+@keyframes Kunai {
+  0% {
+    opacity: 1;
+    transform: perspective(300px) rotatex(70deg) translateY(500px);
+  }
+  25% {
+    opacity: 1;
+    transform: perspective(300px) rotatex(70deg) translateY(-500px);
+  }
+  30% {
+    opacity: 1;
+    transform: perspective(300px) rotatex(70deg) translateY(-500px) rotateZ(180deg);
+  }
+  40% {
+    opacity: 1;
+    transform: perspective(300px) rotatex(70deg) translateY(-500px) rotateZ(180deg);
+  }
+  50% {
+    opacity: 1;
+    transform: perspective(300px) rotatex(70deg) rotateZ(180deg) translateY(-500px);
+  }
+  75%{
+    opacity: 1;
+    transform: perspective(300px) rotatex(70deg) rotateZ(180deg) translateY(-500px);
+  }
+  100% {
+    opacity: 0;
+    transform: perspective(300px) rotatex(70deg) rotateZ(180deg) translateY(-500px);
+  }
+}
+
+/* Susanoo */
+.susanoo {
+  opacity: 0;
+  position: relative;
+  width: 850px;
+  top: 400px;
+  z-index: 1;
+}
+
+.susanoo_change {
+  animation-name:Susanoo;
+  animation-duration: 4s;
+  animation-iteration-count:1;
+  animation-timing-function:cubic-bezier(.69,.19,.18,.87);
+  animation-delay: 1s;
+}
+
+@keyframes Susanoo {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-1100px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(-1100px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-500px);
+  }
+}
+
+/* Sasuke + Ogen */
+li:nth-of-type(2) {
+}
