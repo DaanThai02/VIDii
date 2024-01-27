@@ -70,7 +70,7 @@ TwoTomoeSharingan.addEventListener("click", function(){
     setTimeout(function() {
         document.querySelector('.kunai').classList.remove("kunai_change");
         }, 3000);
-// // Geluid mes wordt afgespeeld
+// Geluid mes wordt afgespeeld
     setTimeout(function() {
         Swoosh_sound.play();
         }, 1400);
@@ -82,8 +82,10 @@ TwoTomoeSharingan.addEventListener("click", function(){
 
 
 var MatureSharingan = document.getElementById("SharinganButton3");
+// Variabele Vuur sound
 var Fire_swoosh_sound = new Audio();
 Fire_swoosh_sound.src = "./audio/Fire_swoosh_sfx.mp3";
+// Variabele Justu sound
 var Jutsu_sound = new Audio();
 Jutsu_sound.src = "./audio/Jutsu_sfx.mp3";
 
@@ -113,17 +115,18 @@ MatureSharingan.addEventListener("click", function(){
     setTimeout(function() {
         document.querySelector('.fire').classList.remove("fire_change");
         }, 5000);
-// // Geluid vuur wordt afgespeeld
-setTimeout(function() {
+// Geluid jutsu en vuur wordt afgespeeld
+    setTimeout(function() {
     Jutsu_sound.play();
     }, 1400);
-setTimeout(function() {
+    setTimeout(function() {
     Fire_swoosh_sound.play();
     }, 2000);
 }); 
 
-var MangekyoSharingan = document.getElementById("SharinganButton4");
 
+var MangekyoSharingan = document.getElementById("SharinganButton4");
+// Magekyo Sharingan sound
 var Mangekyo_sharingan_sound = new Audio();
 Mangekyo_sharingan_sound.src = "./audio/Mangekyou_sharingan_sfx.mp3";
 
@@ -146,16 +149,16 @@ MangekyoSharingan.addEventListener("click", function(){
         document.getElementById("Sharingan_right").classList.remove("RotateSharingan");
         }, 1500);
 // Achtergrond verandert
-document.body.style.backgroundImage = "url('images/naruto_background_4.jpg')";
+    document.body.style.backgroundImage = "url('images/naruto_background_4.jpg')";
 // Oog bloed
-document.querySelector('.blood').classList.add("blood_change");
+    document.querySelector('.blood').classList.add("blood_change");
     setTimeout(function() {
         document.querySelector('.blood').classList.remove("blood_change");
         }, 4000);
 }); 
 
 var EternalMangekyoSharingan = document.getElementById("SharinganButton5");
-// Variabele audio
+// Variabele Eteral mangekyo sharingan sound
 var Eteral_mangekyo_sharingan_sound = new Audio();
 Eteral_mangekyo_sharingan_sound.src = "./audio/Sharingan2_sfx.mp3";
 var Susanoo_sound = new Audio();
@@ -180,24 +183,25 @@ EternalMangekyoSharingan.addEventListener("click", function(){
         document.getElementById("Sharingan_right").classList.remove("RotateSharingan");
         }, 1500);
 // Achtergrond verandert
-document.body.style.backgroundImage = "url('images/naruto_background_5.jpg')";
+    document.body.style.backgroundImage = "url('images/naruto_background_5.jpg')";
 // Paarse monster komt omhoog
-document.querySelector('.susanoo').classList.add("susanoo_change");
+    document.querySelector('.susanoo').classList.add("susanoo_change");
     setTimeout(function() {
         document.querySelector('.susanoo').classList.remove("susanoo_change");
         }, 5000);
 // Geluid susanoo wordt afgespeeld
-setTimeout(function() {
+    setTimeout(function() {
     Susanoo_sound.play();
     }, 1000);
 
 }); 
 
 var Rinnegan = document.getElementById("SharinganButton6");
-
+// Variabele Rinnegan sound
 var Rinnegan_sound = new Audio();
 Rinnegan_sound.src = "./audio/Rinnegan_sfx.mp3";
-var SasukeUchihaMiddle
+// Variabele hele content van Sasuke
+var SasukeUchihaMiddle = document.querySelector(".sasukeUchihaMiddle")
 
 Rinnegan.addEventListener("click", function(){
     SasukeUchihaNormaal.src = "images/Sasuke_uchiha.png";
@@ -218,10 +222,17 @@ Rinnegan.addEventListener("click", function(){
         document.getElementById("Sharingan_right").classList.remove("RotateSharingan");
         }, 1500);
 // Achtergrond verandert
-document.body.style.backgroundImage = "url('images/naruto_background_6.jpg')";
+    document.body.style.backgroundImage = "url('images/naruto_background_6.jpg')";
 // Sasuke teleporteren
-    SharinganChangeRight.classList.add("Teleport");
+    SasukeUchihaMiddle.classList.add("sasukeUchihaMiddle_change");
     setTimeout(function() {
-        document.getElementById("Sharingan_right").classList.remove("RotateSharingan");
-        }, 1500);
+        document.querySelector(".sasukeUchihaMiddle").classList.remove("sasukeUchihaMiddle_change");
+        }, 5000);
+// Geluid jutsu wordt 4x afgespeeld
+    setTimeout(function() {
+    Jutsu_sound.play();
+    }, 500);
+    setTimeout(function() {
+    Jutsu_sound.play();
+    }, 4500);
 }); 
