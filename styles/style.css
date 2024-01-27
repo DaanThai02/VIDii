@@ -62,7 +62,7 @@ header{
 /* Information Sasuke Uchiha */
 .Information {
   display: grid;
-  grid-template-columns: 400px 1fr;
+  grid-template-columns: 350px 1fr;
   grid-template-rows: 80px 1fr;
   grid-column-gap: 30px;
   height: auto;
@@ -74,7 +74,7 @@ header{
   font-family: Naruto, Arial, Helvetica, sans-serif;
   -webkit-text-stroke: 1px var(--color-black);
   align-items: center;
-  justify-content: center;
+  margin-left: 1.5em;
 }
 
 .Information h2{
@@ -97,6 +97,10 @@ header{
   overflow-y: auto;
   margin-bottom: 10px;
   margin-right: 2em;
+}
+
+video {
+  margin: 0 2em 0 2em;
 }
 
 
@@ -430,7 +434,7 @@ li:nth-of-type(2) {
     font-size: 1.2em;
   }
   .Information p {
-    font-size: 1em;
+    font-size: 0.8em;
   }
 }
 
