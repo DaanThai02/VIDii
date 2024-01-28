@@ -34,11 +34,10 @@ OneTomoeSharingan.addEventListener("click", function(){
         }, 1500);
 // Achtergrond verandert
     document.body.style.backgroundImage = "url('images/naruto_background_1.png')";
-    
 }); 
 
 
-             
+// Variabele oog 2
 var TwoTomoeSharingan = document.getElementById("SharinganButton2");
 var Swoosh_sound = new Audio();
 Swoosh_sound.src = "./audio/Swoosh1_sfx.mp3";
@@ -81,6 +80,7 @@ TwoTomoeSharingan.addEventListener("click", function(){
 }); 
 
 
+// Variabele oog 3
 var MatureSharingan = document.getElementById("SharinganButton3");
 // Variabele Vuur sound
 var Fire_swoosh_sound = new Audio();
@@ -125,6 +125,7 @@ MatureSharingan.addEventListener("click", function(){
 }); 
 
 
+// Variabele oog 4
 var MangekyoSharingan = document.getElementById("SharinganButton4");
 // Magekyo Sharingan sound
 var Mangekyo_sharingan_sound = new Audio();
@@ -157,6 +158,8 @@ MangekyoSharingan.addEventListener("click", function(){
         }, 5000);
 }); 
 
+
+// Variabele oog 5
 var EternalMangekyoSharingan = document.getElementById("SharinganButton5");
 // Variabele Eteral mangekyo sharingan sound
 var Eteral_mangekyo_sharingan_sound = new Audio();
@@ -196,6 +199,8 @@ EternalMangekyoSharingan.addEventListener("click", function(){
 
 }); 
 
+
+// Variabele oog 6
 var Rinnegan = document.getElementById("SharinganButton6");
 // Variabele Rinnegan sound
 var Rinnegan_sound = new Audio();
@@ -258,6 +263,7 @@ Logo.addEventListener("click", function(){
     }, 2100);
 });
 
+// Beginscherm met informatie weghalen
 var Start = document.querySelector("section:first-of-type");
 Start.addEventListener("click", function(){
     Start.classList.toggle("hidden_section");

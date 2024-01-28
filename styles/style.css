@@ -25,7 +25,7 @@ body {
   background-image: url("../images/naruto_background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  backdrop-filter: brightness(80%);
+  backdrop-filter: brightness(70%);
   height: auto;
   border: none;
   margin: 0;
@@ -96,7 +96,6 @@ body > section:first-of-type {
   display: flex;
   width: 100vw;
   height: 100vh;
-  top: 0;
   z-index: 6;
   background-image: url("../images/lucht_achtergrond.jpg");
   justify-content: center;
@@ -266,8 +265,6 @@ ul li:nth-of-type(7) {
   outline: 8px solid var(--color-black);
 }
 
-
-
 button:nth-of-type(1) img:nth-of-type(1),button:nth-of-type(1) img:nth-of-type(2), button:nth-of-type(1) img:nth-of-type(3) {
   position: absolute;
 }
@@ -277,6 +274,18 @@ button:nth-of-type(1):hover img {
   animation-duration:2s;
   animation-iteration-count:1;
   animation-timing-function:cubic-bezier(.69,.19,.18,.87);
+}
+@keyframes Sharingan-rotate {
+  0% {
+    transform:rotate(0deg);
+  }
+  85%{
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform:rotate(360deg);
+  }
 }
 
 button:nth-of-type(1):hover img:nth-of-type(1) {
@@ -299,18 +308,7 @@ button:nth-of-type(1):hover img:nth-of-type(4) {
   animation-delay:0.15s;
 }
 
-@keyframes Sharingan-rotate {
-  0% {
-    transform:rotate(0deg);
-  }
-  85%{
-    transform: rotate(360deg);
-  }
 
-  100% {
-    transform:rotate(360deg);
-  }
-}
 
 /* Sasuke Sharingan draaien algemeen*/
 .RotateSharingan {
@@ -319,7 +317,6 @@ button:nth-of-type(1):hover img:nth-of-type(4) {
   animation-iteration-count:1;
   animation-timing-function:cubic-bezier(.69,.19,.18,.87);
 }
-
 @keyframes SharinganRotateSasuke {
   0% {
     transform:rotate(0deg) scale(1.6);
@@ -348,7 +345,6 @@ button:nth-of-type(1):hover img:nth-of-type(4) {
   animation-timing-function:cubic-bezier(.69,.19,.18,.87);
   animation-delay: 1s;
 }
-
 @keyframes FireMouth {
   0% {
     opacity: 0;
@@ -387,7 +383,6 @@ button:nth-of-type(1):hover img:nth-of-type(4) {
   animation-timing-function:cubic-bezier(.69,.19,.18,.87);
   animation-delay: 1s;
 }
-
 @keyframes Bloodeye {
   0% {
     opacity: 0;
@@ -409,7 +404,6 @@ button:nth-of-type(1):hover img:nth-of-type(4) {
   animation-iteration-count:1;
   animation-timing-function:cubic-bezier(.69,.19,.18,.87);
 }
-
 @keyframes SharinganRotateRightEyeSasuke {
   0% {
     transform:rotate(0deg) scale(1);
@@ -426,7 +420,6 @@ button:nth-of-type(1):hover img:nth-of-type(4) {
 }
 
 /* 3. Kunai */
-
 .kunai {
   opacity: 0;
   position: relative;
@@ -442,7 +435,6 @@ button:nth-of-type(1):hover img:nth-of-type(4) {
   animation-timing-function:cubic-bezier(.69,.19,.18,.87);
   animation-delay: 1s;
 }
-
 @keyframes Kunai {
   0% {
     opacity: 1;
@@ -490,7 +482,6 @@ button:nth-of-type(1):hover img:nth-of-type(4) {
   animation-timing-function:cubic-bezier(.69,.19,.18,.87);
   animation-delay: 1s;
 }
-
 @keyframes Susanoo {
   0% {
     opacity: 0.8;
@@ -520,8 +511,6 @@ button:nth-of-type(1):hover img:nth-of-type(4) {
   animation-iteration-count:1;
   animation-delay: 1s;
 }
-
-
 @keyframes teleport {
   0% {
     opacity: 0;
@@ -632,7 +621,6 @@ button:nth-of-type(1):hover img:nth-of-type(4) {
   /* Draai vanaf onderkant */
   transform-origin: bottom;
 }
-
 @keyframes easteregg {
   0% {
     opacity: 1;
