@@ -21,7 +21,7 @@ h1 {
   color:var(--color-white);
 }
 body {
-  background-image: url("/images/naruto_background.jpg");
+  background-image: url("../images/naruto_background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   backdrop-filter: brightness(80%);
