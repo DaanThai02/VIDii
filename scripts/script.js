@@ -1,5 +1,5 @@
-// JavaScript Document
-console.log("Howdy!");
+// JavaScript document test
+console.log("test");
 
 // Variabele Algemeen
 var SasukeUchihaNormaal = document.getElementById("Sasuke_uchiha");
@@ -144,17 +144,17 @@ MangekyoSharingan.addEventListener("click", function(){
     setTimeout(function() {
         document.getElementById("Sharingan_left").classList.remove("RotateSharingan");
         }, 1500);
-    SharinganChangeRight.classList.add("RotateSharingan");
+    SharinganChangeRight.classList.add("RotateSharinganRightEye");
     setTimeout(function() {
-        document.getElementById("Sharingan_right").classList.remove("RotateSharingan");
-        }, 1500);
+        document.getElementById("Sharingan_right").classList.remove("RotateSharinganRightEye");
+        }, 5000);
 // Achtergrond verandert
     document.body.style.backgroundImage = "url('images/naruto_background_4.jpg')";
 // Oog bloed
     document.querySelector('.blood').classList.add("blood_change");
     setTimeout(function() {
         document.querySelector('.blood').classList.remove("blood_change");
-        }, 4000);
+        }, 5000);
 }); 
 
 var EternalMangekyoSharingan = document.getElementById("SharinganButton5");
@@ -236,3 +236,29 @@ Rinnegan.addEventListener("click", function(){
     Jutsu_sound.play();
     }, 4500);
 }); 
+
+// Easteregg
+var Naruto = document.querySelector(".naruto");
+var Logo = document.querySelector(".logo");
+var Naruto_jutsu_sound = new Audio();
+Naruto_jutsu_sound.src = "./audio/Naruto_jutsu_sfx.mp3";
+var Naruto_sms_sound = new Audio();
+Naruto_sms_sound.src = "./audio/Naruto_sms_sfx.mp3"
+
+Logo.addEventListener("click", function(){
+    Logo.src = "images/Naruto_logo.png";
+    Naruto_jutsu_sound.play();
+    Naruto.classList.add("naruto_change");
+    setTimeout(function() {
+        document.querySelector(".naruto").classList.remove("naruto_change");
+        Logo.src = "images/Sasuke_logo.png"
+    }, 7000);
+        setTimeout(function() {
+        Naruto_sms_sound.play();
+    }, 2100);
+});
+
+var Start = document.querySelector("section:first-of-type");
+Start.addEventListener("click", function(){
+    Start.classList.toggle("hidden_section");
+});
